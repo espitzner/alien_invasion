@@ -1,7 +1,8 @@
 import pygame
+from pygame.sprite import Sprite
 
 
-class Ship:
+class Ship(Sprite):
 
     def __init__(self, ai_settings, screen):
         self.screen = screen
@@ -14,6 +15,7 @@ class Ship:
         self.center = float(self.rect.centerx)
         self.moving_right = False
         self.moving_left = False
+        super(Ship, self).__init__()
 
     def center_ship(self):
         self.cneter = self.screen_rect.centerx
